@@ -13,15 +13,15 @@ El objetivo es mostrar la estructura y relaciones principales entre las entidade
 ```mermaid
 erDiagram
     PRODUCTO {
-        String id;
-        String nombre;
-        double precio;
-        int stock;
+        String id
+        String nombre
+        double precio
+        int stock
     }
 
     ITEM_CARRITO {
-        Producto producto;
-        int cantidad;
+        Producto producto
+        int cantidad
         %% subtotal = producto.precio * cantidad
     }
 
@@ -31,17 +31,17 @@ erDiagram
     }
 
     CLIENTE {
-        String id;
-        String nombre;
-        String tipo;
+        String id
+        String nombre
+        String tipo
     }
 
     PEDIDO {
-        String id;
-        Cliente cliente;
-        List<ItemCarrito> items;
-        EstadoPedido estado;
-        BigDecimal total;
+        String id
+        Cliente cliente
+        List ItemCarrito items
+        EstadoPedido estado
+        BigDecimal total
 
         %% calcularTotal: suma los subtotales de los items
         calcularTotal() : BigDecimal
@@ -54,10 +54,10 @@ erDiagram
     }
 
     PAGO {
-        String id;
-        Pedido pedido;
-        BigDecimal monto;
-        String metodo;
+        String id
+        Pedido pedido
+        BigDecimal monto
+        String metodo
     }
 
     %% Relaciones corregidas
@@ -106,3 +106,4 @@ Suma del valor de los productos del pedido, considerando descuentos.
 
 **Descuento**  
 Reducción de precio aplicada según el tipo de cliente o promociones activas. Puede ser porcentaje o monto fijo.
+
