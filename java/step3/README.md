@@ -40,17 +40,11 @@ erDiagram
         String id
         Cliente cliente
         List ItemCarrito items
-        EstadoPedido estado
         BigDecimal total
 
         %% calcularTotal: suma los subtotales de los items
-        calcularTotal() : BigDecimal
-
         %% confirmar: cambia estado de PENDIENTE a CONFIRMADO
-        confirmar()
-
         %% marcarPagado: cambia estado de CONFIRMADO a PAGADO
-        marcarPagado()
     }
 
     PAGO {
@@ -106,4 +100,5 @@ Suma del valor de los productos del pedido, considerando descuentos.
 
 **Descuento**  
 Reducción de precio aplicada según el tipo de cliente o promociones activas. Puede ser porcentaje o monto fijo.
+
 
